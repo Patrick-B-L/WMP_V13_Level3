@@ -40,6 +40,9 @@ while (true)
     }
 }
 
+
+
+
 // Base class. Handles properties and methods for selecting a country and connect the selection to the matching currency and exchange rate
 class OfficeCountry
 {
@@ -74,6 +77,11 @@ class OfficeCountry
         }
     }
 }
+
+
+
+
+
 // Extends OfficeCountry with properties and methods for electronics. 
 class Electronics : OfficeCountry
 {
@@ -95,6 +103,10 @@ class Electronics : OfficeCountry
 
 }
 
+
+
+
+
 // Extends Electronics with properties and methods for computers. 
 class Computer : Electronics
 {
@@ -103,6 +115,10 @@ class Computer : Electronics
     {
     }
 }
+
+
+
+
 
 // Extends Electronics with properties and methods for phones. 
 class Phone : Electronics
@@ -114,6 +130,10 @@ class Phone : Electronics
     
 }
 
+
+
+
+
 // Includes methods for managing lists, formatted printing of the list and sample data
 class Listmanager
 {
@@ -124,7 +144,7 @@ class Listmanager
     {
         return electronicsList.OrderBy(asset => asset.Country).ThenBy(asset => asset.PurchaseDate).ToList();
     }
-    // Show a diagram of the assets 
+    // Show a formatted diagram of the assets 
     public static void ShowElectronicAssets()
     {
         Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -150,7 +170,7 @@ class Listmanager
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
             }
-            // If more than 3 months left to the asset's end of life than just show the row in nomal text color
+            // If it is more than 6 months left to the asset's end of life than just show the row in nomal text color
             else
             {
                 Console.ResetColor();
@@ -181,6 +201,10 @@ class Listmanager
 
     }
 }
+
+
+
+
 
 // Includes methods for validating user inputs
 
@@ -327,6 +351,10 @@ class UserInputValidation
     }
 }
 
+
+
+
+
 // Methods for displaying a welcome screen and options on how to proceed
 class Display
 {
@@ -347,6 +375,11 @@ class Display
 
 
 }
+
+
+
+
+
 // Methods for adding assets
 class AssetManager
 {
